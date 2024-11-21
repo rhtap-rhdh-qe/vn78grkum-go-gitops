@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vn78grkum-go-gitops
+  description: This is GitOps manifest for vn78grkum-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vn78grkum-go
+    backstage.io/kubernetes-id: vn78grkum-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: vn78grkum-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vn78grkum-go
